@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint src/",
+    "lint-fix": "eslint --fix src/",
     "start": "node src/index.js"
   },
   "repository": {

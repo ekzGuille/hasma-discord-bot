@@ -1,6 +1,9 @@
 
-# Created by https://www.gitignore.io/api/node,visualstudiocode
-# Edit at https://www.gitignore.io/?templates=node,visualstudiocode
+# Created by https://www.gitignore.io/api/node,dotenv,visualstudiocode
+# Edit at https://www.gitignore.io/?templates=node,dotenv,visualstudiocode
+
+### dotenv ###
+.env
 
 ### Node ###
 # Logs
@@ -68,7 +71,6 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
 .env.test
 
 # parcel-bundler cache (https://parceljs.org/)
@@ -119,4 +121,4 @@ temp/
 # Ignore all local history of files
 .history
 
-# End of https://www.gitignore.io/api/node,visualstudiocode
+# End of https://www.gitignore.io/api/node,dotenv,visualstudiocode
