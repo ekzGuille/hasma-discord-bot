@@ -1,6 +1,5 @@
 ## Listado de TODOs...
 
-
 * [ ] Funcionalidad 
   * [ ] Implementar el pool de comandos
     * [ ] Filtrar los mensajes por los comandos entrantes (aplicar correspondiente bloqueo)
@@ -16,3 +15,16 @@
 
 * [ ] Refactor
   * [ ] Extraer los métodos a funciones en otros archivos
+
+### NOTAS:
+* Flujo de trabajo:
+1. Usuario manda mensaje
+2. Bot comprueba el comando
+    1. Si es comando de `!pinturillo`: Comprueba que el bot no está *bloqueado* por otro usuario
+        1. Si está bloqueado: El bot no le hará caso y enviará un mensaje informativo.
+        2. Si no está bloqueado: Solo le hará caso a él (para que configure la página). *Bloqueado para el resto*
+    2. Si es otro comando, efectuará dicha lógica
+
+
+
+El usuario pide el comando
