@@ -35,19 +35,7 @@ const env = {
  */
 const activeUsers = {};
 
-/**
- * @typedef BotBlock
- * @property {string} id
- * @property {boolean} blocked
- */
-
-/**
- * @type {BotBlock}
- */
-const blockedBy = {};
-
 module.exports = {
   env,
   activeUsers,
-  blockedBy,
 };
