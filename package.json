@@ -21,7 +21,8 @@
   "homepage": "https://github.com/ekzGuille/hasma-discord-bot#readme",
   "dependencies": {
     "discord.js": "^12.2.0",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "puppeteer": "^3.1.0"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
