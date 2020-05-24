@@ -25,8 +25,16 @@ const allowedServers = commaStringToArray(env.ALLOWED_DISCORD_SERVERS);
 const canSendMessage = (message) => allowedChannels.indexOf(message.channel.id) !== -1
       && allowedServers.indexOf(message.guild.id) !== -1;
 
+/**
+ * Common send message
+ * @param {string} messageToSent
+ * @param {import('discord.js').Message} objectMessage
+ * @returns {Promise}
+ */
+const sendMessage = async (messageToSent, objectMessage) => objectMessage.channel.send(messageToSent);
 
 module.exports = {
   commaStringToArray,
   canSendMessage,
+  sendMessage,
 };

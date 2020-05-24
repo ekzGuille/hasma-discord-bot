@@ -1,9 +1,11 @@
 const pinturillo = require('./pinturillo');
 const { canSendMessage } = require('../utils');
-const { activeUsers } = require('../config');
+
+/** @type {import('./../config').UserMap} */
+const activeUsers = {};
 
 /**
- * @type {CommandList}
+ * @type {import('./../config').CommandList}
  */
 const commandList = {
   '!pinturillo': {
@@ -69,15 +71,3 @@ module.exports = async (message) => {
     }
   }
 };
-
-/**
- * @typedef {{[key: string]: Command}} CommandList
- */
-
-/**
- * @typedef Command
- * @property {(message) => {}} invoke
- * @property {boolean} restricted
- * @property {string} lastInvokerId
- * @property {number} defaultTimeout
- */
