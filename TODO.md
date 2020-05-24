@@ -9,14 +9,14 @@
       * O que esa persona solo pueda hablar con el bot cada X tiempo (objeto clave valor con el @ y la fecha de último mensaje) y un timeout por defecto... 🤔
   * [ ] Chatear con el Bot
     * Mediante emojis se establece una conversación de configuración
-  * [ ] Ver si se puede scrappear la página web 
+  * [x] Ver si se puede scrappear la página web 
     * Enviar los datos
-    * Obtener el link de la lobby
+    * [ ] Obtener el link de la lobby
 
 * [ ] Refactor
   * [ ] Extraer los métodos a funciones en otros archivos
 
-### NOTAS:
+### NOTAS:
 * Flujo de trabajo:
 1. Usuario manda mensaje
 2. Bot comprueba el comando
