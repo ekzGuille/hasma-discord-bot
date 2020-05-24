@@ -11,7 +11,7 @@
     * Mediante emojis se establece una conversación de configuración
   * [x] Ver si se puede scrappear la página web 
     * Enviar los datos
-    * [ ] Obtener el link de la lobby
+    * [x] Obtener el link de la lobby
 
 * [ ] Refactor
   * [ ] Extraer los métodos a funciones en otros archivos
