@@ -1,4 +1,5 @@
 const pinturillo = require('./pinturillo');
+const hola = require('./hola');
 const { canSendMessage } = require('../utils');
 
 /** @type {import('./../config').UserMap} */
@@ -8,15 +9,18 @@ const activeUsers = {};
  * @type {import('./../config').CommandList}
  */
 const commandList = {
-  '!pinturillo': {
-    invoke: pinturillo,
-    restricted: true,
-    lastInvokerId: null,
-    defaultTimeout: 8000,
+  hola: {
+    invoke: hola,
   },
+  // '!pinturillo': {
+  //   invoke: pinturillo,
+  //   restricted: true,
+  //   lastInvokerId: null,
+  //   defaultTimeout: 8000,
+  // },
 };
 
-const commandRegex = /^![\w]+/;
+const commandRegex = /^[\w]+/;
 
 /**
  * @param {import('discord.js').Message} message Message to handle
