@@ -48,7 +48,8 @@ module.exports = async (message) => {
           // User has requested a command before
           if (Object.prototype.hasOwnProperty.call(activeUsers, message.author.id)) {
             //  check anti spam system
-            if (new Date().getTime() - activeUsers[message.author.id].lastMessageDate < command.defaultTimeout) {
+            //  if (new Date().getTime() - activeUsers[message.author.id].lastMessageDate < command.defaultTimeout) { // Metodo viejo
+            if (activeUsers[message.author.id].lastMessageDate + command.defaultTimeout < new Date().getTime()) {
               return message.channel.send(`Espera un poquito ${message.author} plis`);
             }
           } else {
