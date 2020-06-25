@@ -48,15 +48,15 @@ module.exports = async (message) => {
           // User has requested a command before
           if (Object.prototype.hasOwnProperty.call(activeUsers, message.author.id)) {
             //  check anti spam system
-            //  if (new Date().getTime() - activeUsers[message.author.id].lastMessageDate < command.defaultTimeout) { // Metodo viejo
-            if (activeUsers[message.author.id].lastMessageDate + command.defaultTimeout < new Date().getTime()) {
+            //  if (Date.now() - activeUsers[message.author.id].lastMessageDate < command.defaultTimeout) { // Metodo viejo
+            if (activeUsers[message.author.id].lastMessageDate + command.defaultTimeout < Date.now()) {
               return message.channel.send(`Espera un poquito ${message.author} plis`);
             }
           } else {
             activeUsers[message.author.id] = {
               id: message.author.id,
               message,
-              lastMessageDate: new Date().getTime(),
+              lastMessageDate: Date.now(),
             };
           }
           // TODO: Este if tiene que ir arriba del todo, como comprobacion primera que se salte los timeouts
@@ -68,7 +68,7 @@ module.exports = async (message) => {
           }
           // TODO: Hacer la magia
           console.log('magia');
-          activeUsers[message.author.id].lastMessageDate = new Date().getTime();
+          activeUsers[message.author.id].lastMessageDate = Date.now();
         } else {
           return commandList[messageCommand].invoke(message);
         }
